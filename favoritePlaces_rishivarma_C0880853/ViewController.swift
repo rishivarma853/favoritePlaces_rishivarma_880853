@@ -50,41 +50,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
            
         }
     }
-    // core data
-//    func getAllItems(){
-//        do{
-//            Place = try context.fetch(Place.fetchRequest())
-//            DispatchQueue.main.async {
-//                self.tableView.reloadData()
-//            }
-//
-//
-//        }
-//        catch{
-//            //error
-//        }
-//    }
-//    func createItem(name:String){
-//        let newitem = Place(context: context)
-//        newitem.name = name
-//        newitem.country = country
-//        self.models.append(newitem)
-//        do{
-//            try context.save()
-//            getAllItems()
-//        }
-//        catch{
-//            //error
-//        }
-//    }
-//
     func deleteItem(item : Place){
         context.delete(item)
         do{
             try context.save( )
         }
         catch{
-            //error
         }
     }
     
@@ -94,7 +65,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             try context.save( )
         }
         catch{
-            //error
         }
     }
     
